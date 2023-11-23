@@ -1,12 +1,16 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #22293d;
   background-color: #fffffa;
   align-items: center;
   justify-content: center;
 }
 
-h1, h2, p {
+h1,
+h2,
+h3,
+h4,
+p {
   color: #6a7b76;
   margin: 0;
   padding: 0;
@@ -32,3 +36,34 @@ h1, h2, p {
   color: #22293d;
 }
 
+.button-container {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #555273;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d260a4; /* Darker blue on hover */
+}
+
+.link-style {
+  text-decoration: none;
+  color: #fffffa;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover style for the Link component */

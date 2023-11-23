@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import styles from "./login.module.css";
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
-  // State to manage form input values
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -12,6 +13,9 @@ const Login = () => {
     console.log("Login submitted:", { email, password });
     setEmail("");
     setPassword("");
+    setTimeout(() => {
+      navigate('/tasks');
+    }, 1000);
   };
 
   return (
