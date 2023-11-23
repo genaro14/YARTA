@@ -1,1 +1,16 @@
-.TasksList {}
+.container {
+
+}
+.heading {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.linkWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #6A7b76;
+    padding: 20px;
+}

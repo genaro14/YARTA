@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .card {
@@ -12,7 +14,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  margin: 16px;
+  margin: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,6 +41,7 @@
   padding: 8px;
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
 }
 
 .cardActions button {
@@ -47,8 +50,15 @@
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #ff5a00;
+  
   font-weight: 600;
+}
+
+.buttonDelete {
+  background-color: #ff5a00;
+}
+.buttonDone {
+  background-color: #26dd2c;
 }
 
 .cardActions button:hover {

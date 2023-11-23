@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./task.module.css";
 
-const Task = ({ title, subtitle, date, onDelete }) => {
+const Task = ({ title, subtitle, date, onDelete, onDone }) => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -13,7 +13,8 @@ const Task = ({ title, subtitle, date, onDelete }) => {
           </div>
         </div>
         <div className={styles.cardActions}>
-          <button onClick={onDelete}>Delete</button>
+          <button className={styles.buttonDone} onClick={onDone}>Done</button>
+          <button className={styles.buttonDelete}onClick={onDelete}>Delete</button>
         </div>
       </div>
     </div>

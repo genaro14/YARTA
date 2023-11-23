@@ -1,0 +1,26 @@
+.navbar {
+  height: 15%;
+  width: 100%;
+  background-color: #6A7b76
+}
+
+.navList {
+  float: right;
+  margin: 10px;
+  margin-top:10px
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #555273;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #d260a4;
+}

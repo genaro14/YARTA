@@ -18,8 +18,18 @@ const TasksList = () => {
   
   return (
     <>
-      <div className={styles.TasksList}>
-        <h4>To DO List</h4>
+      <div className={styles.container}>
+        <div>
+        <div className={styles.heading}>
+          <h4>To DO List</h4>
+        </div>
+          <div className={styles.linkWrapper}>
+            <a>Today</a>
+            <a>Tomorrow</a>
+            <a>Done</a>
+            <a>Blocked</a>
+          </div>
+        </div>
         {cards.map((card) => (
           <Task
             key={card.id}

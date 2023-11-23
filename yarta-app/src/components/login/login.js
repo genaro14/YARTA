@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import styles from "./login.module.css";
-import { useNavigate } from 'react-router-dom';
 
-
-const Login = () => {
-  const navigate = useNavigate();
+const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,10 +10,16 @@ const Login = () => {
     console.log("Login submitted:", { email, password });
     setEmail("");
     setPassword("");
-    setTimeout(() => {
-      navigate('/tasks');
-    }, 1000);
+    createAuthCookie();
   };
+  const createAuthCookie = () => {
+    const expirationDate = new Date();
+    expirationDate.setFullYear(expirationDate.getFullYear() + 1); // Cookie expires in 1 year
+    document.cookie = "yartAuthCookie=true; expires=" + expirationDate.toUTCString() + "; path=/;";
+    window.location.reload();
+  };
+  
+
 
   return (
     <div className={styles.login}>
@@ -54,9 +57,5 @@ const Login = () => {
     </div>
   );
 };
-
-Login.propTypes = {};
-
-Login.defaultProps = {};
 
 export default Login;
